@@ -32,11 +32,13 @@ Repo  : https://github.com/hackerW1/PSCollection.git
 
 */
 
-### Clone
+### Clone & Install
 
 ```
 $ git clone https://github.com/hackerW1/PSCollection.git
 
 $ cd PSCollection
+
+$ make install
 
 ```
