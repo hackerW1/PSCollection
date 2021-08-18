@@ -22,7 +22,7 @@ They all are listed below.
 - C++ (Easy and Fast and can used in Buffer-overflow | also rev-engineering)
 - JavaScript (Used in XSS Web-Exploitation)
 - PHP (Network Scanning and IP Capturing Phishing etc Web related functions)
-- Perl (Used but rarely) | Not Recommend learn ruby instead
+- Perl (Used rarely) | Not Recommend learn ruby instead
 
 /*
 
