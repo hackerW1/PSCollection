@@ -11,3 +11,4 @@ install:
 	@echo "   ./pscanner.rb <host> <port>"
 	@echo "   ./pscanner"
 	@echo "   ./pscanner.pl -h"
+	@echo "   php pscanner.php"
