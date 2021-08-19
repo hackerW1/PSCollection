@@ -18,27 +18,19 @@ end
 
 if  PORT == nil || HOST == nil 
     usage_rem()
-elsif PORT == nil && HOST == nil
-    usage_rem()
 else
     puts "[+] Scanning on #{HOST} for port #{PORT}"
 
     begin
         s = TCPSocket.new(HOST, PORT)
-        pstatus = "OPEN"
-    rescue Errno::ECONNREFUSED, SocketError
-        pstatus = "REFUSE"
-    rescue Errno::ETIMEDOUT
-        pstatus = "TIMEOUT"
-    end
-
-    if pstatus == "OPEN"
         puts "[+] Port #{PORT} is open on #{HOST}"
-    elsif pstatus == "REFUSE"
-        puts "[-] #{HOST} seems down or doesn't exist."
-    elsif pstatus == "TIMEOUT"
+    rescue Errno::ECONNREFUSED
+        puts "[-] #{PORT} is closed on #{HOST}"
+    rescue SocketError
+        puts "[-] Sad (T_T) can't connect to #{HOST}"
+    rescue Errno::ETIMEDOUT
         puts "[-] Timed out sending request."
-    else
-        puts "You rocked it #{nil}."
+    rescue Interrupt
+        puts "\nAbort!\nUwu star me on github: https://github.com/hackerW1/PSCollection"
     end
 end
