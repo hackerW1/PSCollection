@@ -31,6 +31,6 @@ else
     rescue Errno::ETIMEDOUT
         puts "[-] Timed out sending request."
     rescue Interrupt
-        puts "\nAbort!\nUwu star me on github: https://github.com/hackerW1/PSCollection"
+        puts "\nAbort! Uwu star me on github: https://github.com/hackerW1/PSCollection"
     end
 end
